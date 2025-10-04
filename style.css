@@ -1,0 +1,61 @@
+/* style.css */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111827; /* Dark Blue Background */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #22d3ee; /* Cyan Color */
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.25rem;
+    color: #9ca3af; /* Gray Color */
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    border: 2px solid transparent; /* Border ke liye jagah banayein */
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #06b6d4; /* Cyan */
+    color: white;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border-color: #06b6d4;
+}
+
