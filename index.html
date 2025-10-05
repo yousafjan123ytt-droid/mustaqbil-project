@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -48,6 +49,40 @@
         </div>
     </div>
 
+    <!-- ===== NAYA FEATURE BOXES SECTION SHURU HOTA HAI ===== -->
+    <section class="features-section">
+        <div class="features-container">
+            <h2>Har Qadam Par Aap Ke Saath</h2>
+            <div class="features-grid">
+                <!-- Feature Box 1: Naukriyan -->
+                <a href="jobs.html" class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <h3>Naukriyan</h3>
+                    <p>Pakistan bhar mein hazaron taza tareen jobs talash karein.</p>
+                </a>
+                <!-- Feature Box 2: Dakhlay -->
+                <a href="admissions.html" class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="school"></i>
+                    </div>
+                    <h3>University Dakhlay</h3>
+                    <p>Top universities ke admission ki maloomat aur deadlines hasil karein.</p>
+                </a>
+                <!-- Feature Box 3: Scholarships -->
+                <a href="scholarships.html" class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <h3>Scholarships</h3>
+                    <p>Mulki aur ghair-mulki scholarships ke mawaqay se faida uthayein.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ===== NAYA FEATURE BOXES SECTION KHATAM HOTA HAI ===== -->
+
     <script>
         // Logic for the Background Image Slider
         const bgSlider = document.getElementById('bg-slider');
@@ -70,6 +105,9 @@
         // Set the initial background
         bgSlider.style.backgroundImage = `url('${images[0]}')`;
         setInterval(changeBackground, 7000); // Change image every 7 seconds
+
+        // Lucide Icons ko render karein
+        lucide.createIcons();
     </script>
 </body>
 </html>

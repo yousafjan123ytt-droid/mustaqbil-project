@@ -14,8 +14,27 @@ body {
     line-height: 1.6;
 }
 
+/* General Button Styles */
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.btn-primary { background-color: #22d3ee; color: #111827; }
+.btn-primary:hover { background-color: #67e8f9; }
+.btn-secondary { background-color: transparent; color: #e5e7eb; border: 2px solid #374151; }
+.btn-secondary:hover { background-color: #374151; }
+
 /* ========================================= */
-/* Index Page Layout & Slideshow             */
+/* Index Page: Hero Section & Slideshow      */
 /* ========================================= */
 .main-container {
     display: flex;
@@ -67,7 +86,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    flex-wrap: wrap; 
     gap: 1rem;
 }
 
@@ -135,27 +154,64 @@ body {
 .search-bar-container input::placeholder { color: #a0aec0; }
 .search-bar-container input:focus { outline: none; }
 
-/* General Button Styles */
-.btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
+/* ========================================= */
+/* Index Page: Feature Boxes Section         */
+/* ========================================= */
+.features-section {
+    background-color: #0d1117; 
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.features-section h2 {
+    font-size: 2rem;
     font-weight: 700;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    margin-bottom: 2.5rem;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+.feature-card {
+    background-color: #1a2233;
+    border: 1px solid #2d3748;
+    border-radius: 12px;
+    padding: 2rem;
     text-decoration: none;
-    display: inline-block;
-    white-space: nowrap;
+    color: #e5e7eb;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: #22d3ee;
+}
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(34, 211, 238, 0.1);
+    color: #22d3ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem auto;
+}
+.feature-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.feature-card p {
+    font-size: 0.9rem;
+    color: #a0aec0;
 }
 
-.btn-primary { background-color: #22d3ee; color: #111827; }
-.btn-primary:hover { background-color: #67e8f9; }
-.btn-secondary { background-color: transparent; color: #e5e7eb; border: 2px solid #374151; }
-.btn-secondary:hover { background-color: #374151; }
-
 /* ========================================= */
-/* Listing Pages Styles (Jobs, etc.)         */
+/* Listing Pages (Jobs, Admissions, etc.)    */
 /* ========================================= */
 .listing-page-body { background-color: #0d1117; }
 .listing-page-main-header { background-color: #1a2233; border-bottom: 1px solid #2d3748; padding: 1rem 2rem; }
@@ -166,11 +222,11 @@ body {
 .filter-widget h3 { margin-top: 0; font-size: 1.5rem; border-bottom: 1px solid #2d3748; padding-bottom: 1rem; margin-bottom: 1.5rem; }
 .listings-content { flex: 1; }
 .listing-title { font-size: 2rem; font-weight: 700; margin-top: 0; margin-bottom: 1.5rem; }
-.job-card { background-color: #1a2233; border: 1px solid #2d3748; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; transition: border-color 0.2s ease; }
-.job-card:hover { border-color: #22d3ee; }
+.listing-card { background-color: #1a2233; border: 1px solid #2d3748; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; transition: border-color 0.2s ease; }
+.listing-card:hover { border-color: #22d3ee; }
 
 /* ========================================= */
-/* Form Styles (Login/Signup)                */
+/* Form Pages (Login/Signup)                 */
 /* ========================================= */
 .form-page-body {
     display: flex;
@@ -188,7 +244,7 @@ body {
 .form-link a:hover { text-decoration: underline; }
 
 /* ========================================= */
-/* Dashboard Styles                          */
+/* Dashboard Page                            */
 /* ========================================= */
 .dashboard-body { background-color: #0d1117; }
 .dashboard-main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
