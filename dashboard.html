@@ -3,32 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - mustaqbil.pk</title>
+    <title>mustaqbil.pk - Aapka Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-    
-    <header class="main-header">
+<body class="dashboard-body">
+
+    <!-- Dashboard Header -->
+    <header class="dashboard-header-bar">
         <div class="header-content">
-            <h1 class="logo-text">mustaqbil.pk</h1>
+            <a href="index.html" class="logo-text">mustaqbil.pk</a>
             <button id="logout-button" class="btn btn-secondary">Logout</button>
         </div>
     </header>
 
+    <!-- Main Dashboard Content -->
     <main class="dashboard-main">
-        <div class="welcome-message">
-            <h2>Dashboard Mein Khush Amdeed!</h2>
-            <!-- Nayi line: Yahan hum user ka email dikhayenge -->
-            <p>Aap is email se logged in hain: <strong id="user-email">Loading...</strong></p>
+        <div class="dashboard-header">
+            <h1>Aapka Dashboard</h1>
+            <p>Khush Amdeed, <span id="user-email">user@email.com</span></p>
+        </div>
+
+        <!-- Widgets Grid -->
+        <div class="widget-grid">
+
+            <!-- 1. Featured Jobs Widget -->
+            <div class="widget featured-widget">
+                <div class="widget-header">
+                    <i data-lucide="star"></i>
+                    <h3>Khas Mawaqay (Featured Jobs)</h3>
+                </div>
+                <ul class="widget-list">
+                    <li>Senior Software Engineer - Netsol, Lahore</li>
+                    <li>Digital Marketing Head - Zameen.com, Karachi</li>
+                    <li>Customer Support Lead (Remote) - Ibex Global</li>
+                </ul>
+            </div>
+
+            <!-- 2. Profile Score Widget -->
+            <div class="widget">
+                <div class="widget-header">
+                    <i data-lucide="user-round"></i>
+                    <h3>Aap Ki Profile</h3>
+                </div>
+                <p class="widget-description">Aap ki profile 75% mukammal hai.</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                </div>
+                <a href="#" class="widget-link">Profile Update Karein &rarr;</a>
+            </div>
+
+            <!-- 3. Aap Ke Liye Jobs Widget -->
+            <div class="widget">
+                <div class="widget-header">
+                    <i data-lucide="sparkles"></i>
+                    <h3>Aap Ke Liye Jobs</h3>
+                </div>
+                <ul class="widget-list">
+                    <li>Junior Python Developer - Lahore</li>
+                    <li>Graphic Designer (Remote) - Islamabad</li>
+                    <li>Content Writer Intern - Karachi</li>
+                </ul>
+            </div>
+
+            <!-- 4. Scholarships Widget -->
+            <div class="widget">
+                <div class="widget-header">
+                    <i data-lucide="graduation-cap"></i>
+                    <h3>Mehfooz Scholarships</h3>
+                </div>
+                <p class="widget-description">Yahan aap ki save ki hui scholarships nazar aayengi.</p>
+                <a href="scholarships.html" class="widget-link">Tamam Scholarships Dekhein &rarr;</a>
+            </div>
+            
+            <!-- 5. Test Tayyari Widget -->
+            <div class="widget">
+                <div class="widget-header">
+                    <i data-lucide="target"></i>
+                    <h3>Test Tayyari</h3>
+                </div>
+                 <p class="widget-description">NTS, ETEA, aur deegar entry tests ki tayyari karein.</p>
+                 <a href="#" class="widget-link">Abhi Tayyari Shuru Karein &rarr;</a>
+            </div>
+
         </div>
     </main>
 
-    <!-- Supabase aur hamari auth.js file ko jorne ke liye -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="auth.js"></script>
+    <script>
+        // Lucide Icons ko render karein
+        lucide.createIcons();
+    </script>
 </body>
 </html>
 
