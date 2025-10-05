@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - mustaqbil.pk</title>
+    <!-- CSS file se jora gaya -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Naya Account Banayein</h1>
+        <p>mustaqbil.pk par apne safar ka aaghaz karein.</p>
+        
+        <form id="signup-form" class="auth-form">
+            <input type="email" id="email" placeholder="Aap ka Email" required>
+            <input type="password" id="password" placeholder="Password Banayein" required>
+            <button type="submit" class="btn btn-primary form-btn">Account Banayein</button>
+        </form>
+        
+        <p class="form-footer">Pehle se account hai? <a href="index.html">Yahan Login Karein</a></p>
+    </div>
+
+    <!-- Step 1: Supabase ki online library ko shamil kiya gaya hai -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <!-- Step 2: Hamari apni auth.js file ko is page se jora gaya hai -->
+    <script src="auth.js"></script>
+
+</body>
+</html>
+
