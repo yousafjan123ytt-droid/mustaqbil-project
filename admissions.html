@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dakhlay - mustaqbil.pk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html" class="logo-text">mustaqbil.pk</a>
+            <nav class="main-nav">
+                <a href="jobs.html">Naukriyan</a>
+                <a href="admissions.html" class="active">Dakhlay</a>
+                <a href="scholarships.html">Scholarships</a>
+                <a href="reviews.html">Company Reviews</a>
+            </nav>
+            <div class="header-buttons">
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="listing-page-main">
+        <div class="listing-page-container">
+            <!-- Filters Ka Column -->
+            <aside class="filters-sidebar">
+                <div class="filter-widget">
+                    <h3>Filters</h3>
+                    <div class="form-group">
+                        <label for="university" class="form-label">University</label>
+                        <input type="text" id="university" class="form-input" placeholder="e.g., NUST">
+                    </div>
+                    <div class="form-group">
+                        <label for="city" class="form-label">Shehar</label>
+                        <input type="text" id="city" class="form-input" placeholder="e.g., Islamabad">
+                    </div>
+                     <div class="form-group">
+                        <label for="field" class="form-label">Field of Study</label>
+                        <select id="field" class="form-input">
+                            <option>Tamam Fields</option>
+                            <option>Engineering</option>
+                            <option>Medical</option>
+                            <option>Business</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%;">Apply Filters</button>
+                </div>
+            </aside>
+
+            <!-- Admissions Ki List Ka Column -->
+            <section class="listings-content">
+                <h2 class="listing-title">Naye Dakhlay</h2>
+                
+                <!-- Admission Card 1 -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h4>BS Computer Science</h4>
+                        <span class="deadline">Deadline: 30 Oct 2025</span>
+                    </div>
+                    <p class="company-name">National University of Sciences & Technology (NUST)</p>
+                    <p class="location">Islamabad, Pakistan</p>
+                    <div class="job-card-footer">
+                        <a href="#" class="btn btn-primary">Tafseel Dekhein</a>
+                    </div>
+                </div>
+
+                <!-- Admission Card 2 -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h4>BBA (Hons)</h4>
+                         <span class="deadline">Deadline: 15 Nov 2025</span>
+                    </div>
+                    <p class="company-name">Institute of Business Administration (IBA)</p>
+                    <p class="location">Karachi, Pakistan</p>
+                    <div class="job-card-footer">
+                        <a href="#" class="btn btn-primary">Tafseel Dekhein</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

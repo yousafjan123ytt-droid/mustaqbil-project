@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naukriyan - mustaqbil.pk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html" class="logo-text">mustaqbil.pk</a>
+            <nav class="main-nav">
+                <a href="jobs.html" class="active">Naukriyan</a>
+                <a href="#">Dakhlay</a>
+                <a href="#">Scholarships</a>
+                <a href="#">Company Reviews</a>
+            </nav>
+            <div class="header-buttons">
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="listing-page-main">
+        <div class="listing-page-container">
+            <!-- Filters Ka Column -->
+            <aside class="filters-sidebar">
+                <div class="filter-widget">
+                    <h3>Filters</h3>
+                    <div class="form-group">
+                        <label for="keyword" class="form-label">Keyword</label>
+                        <input type="text" id="keyword" class="form-input" placeholder="e.g., Software Engineer">
+                    </div>
+                    <div class="form-group">
+                        <label for="city" class="form-label">Shehar</label>
+                        <input type="text" id="city" class="form-input" placeholder="e.g., Lahore">
+                    </div>
+                     <div class="form-group">
+                        <label for="category" class="form-label">Category</label>
+                        <select id="category" class="form-input">
+                            <option>Tamam Categories</option>
+                            <option>IT & Software</option>
+                            <option>Marketing</option>
+                            <option>Engineering</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%;">Apply Filters</button>
+                </div>
+            </aside>
+
+            <!-- Jobs Ki List Ka Column -->
+            <section class="listings-content">
+                <h2 class="listing-title">Nayi Naukriyan</h2>
+                
+                <!-- Job Card 1 -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h4>Senior Python Developer</h4>
+                        <span class="job-type full-time">Full Time</span>
+                    </div>
+                    <p class="company-name">Netsol Technologies</p>
+                    <p class="location">Lahore, Pakistan</p>
+                    <div class="job-card-footer">
+                        <a href="#" class="btn btn-primary">Tafseel Dekhein</a>
+                    </div>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h4>Digital Marketing Executive</h4>
+                        <span class="job-type part-time">Part Time</span>
+                    </div>
+                    <p class="company-name">Zameen.com</p>
+                    <p class="location">Karachi, Pakistan (Remote)</p>
+                    <div class="job-card-footer">
+                        <a href="#" class="btn btn-primary">Tafseel Dekhein</a>
+                    </div>
+                </div>
+
+                 <!-- Job Card 3 -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h4>Graphic Designer Intern</h4>
+                        <span class="job-type internship">Internship</span>
+                    </div>
+                    <p class="company-name">Graana.com</p>
+                    <p class="location">Islamabad, Pakistan</p>
+                    <div class="job-card-footer">
+                        <a href="#" class="btn btn-primary">Tafseel Dekhein</a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,24 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mustaqbil.pk - Home</title>
+    <title>mustaqbil.pk - Aap Ke Mustaqbil Ka Sathi</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hero-container">
-        <h1>mustaqbil.pk</h1>
-        <p>Aap ke mustaqbil ka sathi. Jald aa raha hai.</p>
-        <div class="btn-group">
-            <a href="login.html" class="btn btn-secondary">Login</a>
-            <a href="signup.html" class="btn btn-primary">Sign Up</a>
+
+    <!-- Background Slider aur Overlay -->
+    <div id="bg-slider"></div>
+    <div id="bg-overlay"></div>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="logo-text">mustaqbil.pk</h1>
+            <nav class="main-nav">
+                <a href="jobs.html">Naukriyan</a>
+                <a href="admissions.html">Dakhlay</a>
+                <a href="scholarships.html">Scholarships</a>
+                <a href="reviews.html">Company Reviews</a>
+            </nav>
+            <div class="header-buttons">
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
         </div>
-    </div>
+    </header>
+
+    <main class="hero-container">
+        <h1>Apna Mustaqbil Yahan Talaash Karein</h1>
+        <p>Pakistan ka wahid platform jo aapko naukriyon, dakhlon, aur entry tests ki dunya se jorta hai.</p>
+        <div class="search-bar-container">
+            <input type="text" placeholder="Job title, keyword, or company">
+            <button class="btn btn-primary">Talaash Karein</button>
+        </div>
+    </main>
+
+    <script>
+        // Background Image Slider Ka Logic
+        const bgSlider = document.getElementById('bg-slider');
+        const images = [
+            'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1974&auto=format&fit=crop'
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            bgSlider.style.opacity = 0;
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                bgSlider.style.backgroundImage = `url('${images[currentIndex]}')`;
+                bgSlider.style.opacity = 1;
+            }, 1000);
+        }
+        
+        bgSlider.style.backgroundImage = `url('${images[0]}')`;
+        setInterval(changeBackground, 7000);
+    </script>
 </body>
 </html>
 
