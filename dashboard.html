@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - mustaqbil.pk</title>
+    <title>Dashboard - mustaqbil.pk</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="form-container">
-        <h1>Naya Account Banayein</h1>
-        <p>mustaqbil.pk par apna safar shuru karein.</p>
-        
-        <form id="signup-form" class="auth-form">
-            <input type="email" id="email" placeholder="Aap ka Email" required>
-            <input type="password" id="password" placeholder="Ek mazboot Password banayein" required>
-            <button type="submit" class="btn btn-primary form-btn">Account Banayein</button>
-        </form>
-        
-        <p class="form-footer">Pehle se account hai? <a href="login.html">Yahan Login Karein</a></p>
+    <div class="hero-container">
+        <h1>Dashboard Mein Khush Amdeed!</h1>
+        <p>Aap kamyabi se login ho chuke hain.</p>
+        <div class="btn-group">
+            <!-- Yeh button auth.js mein diye gaye code se kaam karega -->
+            <button id="logout-button" class="btn btn-primary">Logout</button>
+        </div>
     </div>
 
     <!-- Supabase aur hamari auth.js file ko jorne ke liye -->

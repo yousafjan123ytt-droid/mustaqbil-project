@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - mustaqbil.pk</title>
+    <title>Login - mustaqbil.pk</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,21 +12,21 @@
 <body>
 
     <div class="form-container">
-        <h1>Naya Account Banayein</h1>
-        <p>mustaqbil.pk par apna safar shuru karein.</p>
+        <h1>Apne Account Mein Login Karein</h1>
+        <p>mustaqbil.pk par wapis khushamdeed.</p>
         
-        <form id="signup-form" class="auth-form">
+        <form id="login-form" class="auth-form">
             <input type="email" id="email" placeholder="Aap ka Email" required>
-            <input type="password" id="password" placeholder="Ek mazboot Password banayein" required>
-            <button type="submit" class="btn btn-primary form-btn">Account Banayein</button>
+            <input type="password" id="password" placeholder="Aap ka Password" required>
+            <button type="submit" class="btn btn-primary form-btn">Login Karein</button>
         </form>
         
-        <p class="form-footer">Pehle se account hai? <a href="login.html">Yahan Login Karein</a></p>
+        <p class="form-footer">Account nahi hai? <a href="signup.html">Naya Banayein</a></p>
     </div>
 
-    <!-- Supabase aur hamari auth.js file ko jorne ke liye -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="auth.js"></script>
+
 </body>
 </html>
 
