@@ -10,14 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hero-container">
-        <h1>Dashboard Mein Khush Amdeed!</h1>
-        <p>Aap kamyabi se login ho chuke hain.</p>
-        <div class="btn-group">
-            <!-- Yeh button auth.js mein diye gaye code se kaam karega -->
-            <button id="logout-button" class="btn btn-primary">Logout</button>
+    
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="logo-text">mustaqbil.pk</h1>
+            <button id="logout-button" class="btn btn-secondary">Logout</button>
         </div>
-    </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="welcome-message">
+            <h2>Dashboard Mein Khush Amdeed!</h2>
+            <!-- Nayi line: Yahan hum user ka email dikhayenge -->
+            <p>Aap is email se logged in hain: <strong id="user-email">Loading...</strong></p>
+        </div>
+    </main>
 
     <!-- Supabase aur hamari auth.js file ko jorne ke liye -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
