@@ -1,24 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="listing-page-body">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Reviews - mustaqbil.pk</title>
+    <title>mustaqbil.pk - Company Reviews</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-content">
+    <header class="listing-page-main-header">
+        <div class="header-content" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
             <a href="index.html" class="logo-text">mustaqbil.pk</a>
-            <nav class="main-nav">
-                <a href="jobs.html">Naukriyan</a>
-                <a href="admissions.html">Dakhlay</a>
-                <a href="scholarships.html">Scholarships</a>
-                <a href="reviews.html" class="active">Company Reviews</a>
-            </nav>
             <div class="header-buttons">
                 <a href="login.html" class="btn btn-secondary">Login</a>
                 <a href="signup.html" class="btn btn-primary">Sign Up</a>
@@ -26,55 +20,37 @@
         </div>
     </header>
 
-    <main class="listing-page-main">
-        <div class="listing-page-container">
-            <!-- Filters Ka Column -->
-            <aside class="filters-sidebar">
-                <div class="filter-widget">
-                    <h3>Filters</h3>
-                    <div class="form-group">
-                        <label for="company" class="form-label">Company Name</label>
-                        <input type="text" id="company" class="form-input" placeholder="e.g., Netsol">
-                    </div>
-                    <div class="form-group">
-                        <label for="industry" class="form-label">Industry</label>
-                        <input type="text" id="industry" class="form-input" placeholder="e.g., IT">
-                    </div>
-                    <button class="btn btn-primary" style="width: 100%;">Apply Filters</button>
+    <main class="listing-page-container">
+        <aside class="filters-sidebar">
+            <div class="filter-widget">
+                <h3>Filters</h3>
+                <div class="form-group">
+                    <label for="company" class="form-label">Company Name</label>
+                    <input type="text" id="company" class="form-input" placeholder="e.g., Netsol">
                 </div>
-            </aside>
+                <div class="form-group">
+                    <label for="industry" class="form-label">Industry</label>
+                    <input type="text" id="industry" class="form-input" placeholder="e.g., IT">
+                </div>
+                <button class="btn btn-primary" style="width: 100%;">Apply Filters</button>
+            </div>
+        </aside>
+        <section class="listings-content">
+            <h1 class="listing-title">Taza Tareen Company Reviews</h1>
+            
+            <!-- Review cards ab yahan JavaScript ke zariye aayenge -->
+            <div id="reviews-container">
+                <!-- Shuru mein yahan "Loading..." ka message aayega -->
+            </div>
 
-            <!-- Reviews Ki List Ka Column -->
-            <section class="listings-content">
-                <h2 class="listing-title">Company Reviews</h2>
-                
-                <!-- Review Card 1 -->
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <h4>Netsol Technologies</h4>
-                        <div class="rating">★★★★☆</div>
-                    </div>
-                    <p class="review-title">"Bohat Acha Mahol Aur Seekhne Ke Mawaqay"</p>
-                    <p class="review-snippet">"Netsol mein kaam karne ka tajurba bohat acha raha. Management supportive hai aur projects challenging hain..."</p>
-                    <div class="job-card-footer">
-                        <a href="#" class="btn btn-primary">Poora Review Parhein</a>
-                    </div>
-                </div>
-
-                 <!-- Review Card 2 -->
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <h4>Systems Limited</h4>
-                        <div class="rating">★★★★★</div>
-                    </div>
-                    <p class="review-title">"Pakistan Ki Behtareen IT Company"</p>
-                    <p class="review-snippet">"Salary aur benefits market ke hisab se behtareen hain. Work-life balance par bhi tawajjah di jaati hai..."</p>
-                    <div class="job-card-footer">
-                        <a href="#" class="btn btn-primary">Poora Review Parhein</a>
-                    </div>
-                </div>
-            </section>
-        </div>
+        </section>
     </main>
+    
+    <!-- Supabase aur hamari JS files ko jorein -->
+    <!-- AHEM: type="module" zaroori hai taake 'import' kaam kare -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="config.js"></script>
+    <script type="module" src="listings.js"></script>
 </body>
 </html>
+
