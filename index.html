@@ -12,32 +12,35 @@
 </head>
 <body>
 
-    <!-- Main Container -->
     <div class="main-container">
-        <!-- Background Slider and Overlay -->
         <div id="bg-slider"></div>
         <div id="bg-overlay"></div>
 
-        <!-- Content Wrapper -->
         <div class="content-wrapper">
-            <!-- Header (Menu) -->
             <header class="main-header">
                 <div class="header-content">
                     <a href="index.html" class="logo-text">mustaqbil.pk</a>
-                    <nav class="main-nav">
+                    
+                    <!-- Yeh Desktop Menu Hai -->
+                    <nav class="main-nav desktop-nav">
                         <a href="jobs.html">Naukriyan</a>
                         <a href="admissions.html">Dakhlay</a>
                         <a href="scholarships.html">Scholarships</a>
                         <a href="reviews.html">Company Reviews</a>
                     </nav>
-                    <div class="header-buttons">
+                    
+                    <div class="header-buttons desktop-nav">
                         <a href="login.html" class="btn btn-secondary">Login</a>
                         <a href="signup.html" class="btn btn-primary">Sign Up</a>
                     </div>
+
+                    <!-- Yeh Naya Mobile Menu Button Hai -->
+                    <button id="mobile-menu-button" class="mobile-menu-button">
+                        <i data-lucide="menu"></i>
+                    </button>
                 </div>
             </header>
 
-            <!-- Hero Section (Main Heading and Search Bar) -->
             <main class="hero-container">
                 <h1>Apna Mustaqbil Yahan Talaash Karein</h1>
                 <p>Pakistan ka wahid platform jo aapko naukriyon, dakhlon, aur entry tests ki dunya se jorta hai.</p>
@@ -47,44 +50,45 @@
                 </div>
             </main>
         </div>
-    </div>
-
-    <!-- ===== NAYA FEATURE BOXES SECTION SHURU HOTA HAI ===== -->
-    <section class="features-section">
-        <div class="features-container">
-            <h2>Har Qadam Par Aap Ke Saath</h2>
-            <div class="features-grid">
-                <!-- Feature Box 1: Naukriyan -->
-                <a href="jobs.html" class="feature-card">
-                    <div class="feature-icon">
-                        <i data-lucide="briefcase"></i>
-                    </div>
-                    <h3>Naukriyan</h3>
-                    <p>Pakistan bhar mein hazaron taza tareen jobs talash karein.</p>
-                </a>
-                <!-- Feature Box 2: Dakhlay -->
-                <a href="admissions.html" class="feature-card">
-                    <div class="feature-icon">
-                        <i data-lucide="school"></i>
-                    </div>
-                    <h3>University Dakhlay</h3>
-                    <p>Top universities ke admission ki maloomat aur deadlines hasil karein.</p>
-                </a>
-                <!-- Feature Box 3: Scholarships -->
-                <a href="scholarships.html" class="feature-card">
-                    <div class="feature-icon">
-                        <i data-lucide="graduation-cap"></i>
-                    </div>
-                    <h3>Scholarships</h3>
-                    <p>Mulki aur ghair-mulki scholarships ke mawaqay se faida uthayein.</p>
-                </a>
+        
+        <div class="feature-boxes-container">
+            <div class="feature-box">
+                <i data-lucide="briefcase"></i>
+                <h3>Taza Tareen Naukriyan</h3>
+                <p>Pakistan bhar mein hazaron jobs mein se apne liye behtareen mawaqa talaash karein.</p>
+            </div>
+            <div class="feature-box">
+                <i data-lucide="school"></i>
+                <h3>University Dakhlay</h3>
+                <p>Top universities ke admission ki maloomat aur deadlines se bakhabar rahein.</p>
+            </div>
+            <div class="feature-box">
+                <i data-lucide="graduation-cap"></i>
+                <h3>Mulki & Ghair-Mulki Scholarships</h3>
+                <p>Apni taleem ke liye behtareen scholarships aur financial aid ke mawaqay haasil karein.</p>
             </div>
         </div>
-    </section>
-    <!-- ===== NAYA FEATURE BOXES SECTION KHATAM HOTA HAI ===== -->
 
+    </div>
+
+    <!-- Yeh Naya Mobile Menu Panel Hai -->
+    <div id="mobile-menu" class="mobile-menu">
+        <button id="close-menu-button" class="close-menu-button">&times;</button>
+        <nav>
+            <a href="jobs.html">Naukriyan</a>
+            <a href="admissions.html">Dakhlay</a>
+            <a href="scholarships.html">Scholarships</a>
+            <a href="reviews.html">Company Reviews</a>
+            <hr>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+    </div>
+
+    <script src="mobile-nav.js"></script>
     <script>
-        // Logic for the Background Image Slider
+        lucide.createIcons();
+        // Background Slider Ka Logic
         const bgSlider = document.getElementById('bg-slider');
         const images = [
             'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop',
@@ -92,22 +96,16 @@
             'https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1974&auto=format&fit=crop'
         ];
         let currentIndex = 0;
-
         function changeBackground() {
             bgSlider.style.opacity = 0;
             setTimeout(() => {
                 currentIndex = (currentIndex + 1) % images.length;
                 bgSlider.style.backgroundImage = `url('${images[currentIndex]}')`;
                 bgSlider.style.opacity = 1;
-            }, 1000); // 1 second for fade transition
+            }, 1000);
         }
-        
-        // Set the initial background
         bgSlider.style.backgroundImage = `url('${images[0]}')`;
-        setInterval(changeBackground, 7000); // Change image every 7 seconds
-
-        // Lucide Icons ko render karein
-        lucide.createIcons();
+        setInterval(changeBackground, 7000);
     </script>
 </body>
 </html>

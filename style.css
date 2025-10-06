@@ -14,27 +14,8 @@ body {
     line-height: 1.6;
 }
 
-/* General Button Styles */
-.btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    display: inline-block;
-    white-space: nowrap;
-}
-
-.btn-primary { background-color: #22d3ee; color: #111827; }
-.btn-primary:hover { background-color: #67e8f9; }
-.btn-secondary { background-color: transparent; color: #e5e7eb; border: 2px solid #374151; }
-.btn-secondary:hover { background-color: #374151; }
-
 /* ========================================= */
-/* Index Page: Hero Section & Slideshow      */
+/* Index Page Layout & Slideshow             */
 /* ========================================= */
 .main-container {
     display: flex;
@@ -42,7 +23,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 2rem;
+    padding: 1rem;
     position: relative;
     overflow: hidden;
 }
@@ -74,6 +55,10 @@ body {
     width: 100%;
     max-width: 1200px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-header {
@@ -86,8 +71,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; 
-    gap: 1rem;
+    width: 100%;
 }
 
 .logo-text {
@@ -100,8 +84,6 @@ body {
 .main-nav {
     display: flex;
     gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .main-nav a {
@@ -112,6 +94,13 @@ body {
 }
 
 .main-nav a:hover { color: #fff; }
+
+.header-buttons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.hero-container { margin-bottom: 3rem; }
 
 .hero-container h1 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
@@ -154,64 +143,69 @@ body {
 .search-bar-container input::placeholder { color: #a0aec0; }
 .search-bar-container input:focus { outline: none; }
 
-/* ========================================= */
-/* Index Page: Feature Boxes Section         */
-/* ========================================= */
-.features-section {
-    background-color: #0d1117; 
-    padding: 4rem 2rem;
-    text-align: center;
-}
-.features-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.features-section h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
-}
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* Feature Boxes */
+.feature-boxes-container {
+    display: flex;
     gap: 1.5rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
 }
-.feature-card {
-    background-color: #1a2233;
+.feature-box {
+    background-color: rgba(26, 34, 51, 0.7);
     border: 1px solid #2d3748;
     border-radius: 12px;
     padding: 2rem;
-    text-decoration: none;
-    color: #e5e7eb;
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    backdrop-filter: blur(5px);
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
-.feature-card:hover {
+.feature-box:hover {
     transform: translateY(-10px);
     border-color: #22d3ee;
 }
-.feature-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: rgba(34, 211, 238, 0.1);
+.feature-box i {
     color: #22d3ee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 1.5rem auto;
+    margin-bottom: 1rem;
+    width: 48px;
+    height: 48px;
 }
-.feature-card h3 {
+.feature-box h3 {
     font-size: 1.25rem;
-    font-weight: 600;
     margin-bottom: 0.5rem;
+    color: #fff;
 }
-.feature-card p {
-    font-size: 0.9rem;
+.feature-box p {
     color: #a0aec0;
+    font-size: 0.9rem;
 }
 
+
+/* General Button Styles */
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.btn-primary { background-color: #22d3ee; color: #111827; }
+.btn-primary:hover { background-color: #67e8f9; }
+.btn-secondary { background-color: transparent; color: #e5e7eb; border: 2px solid #374151; }
+.btn-secondary:hover { background-color: #374151; }
+
 /* ========================================= */
-/* Listing Pages (Jobs, Admissions, etc.)    */
+/* Listing Pages Styles (Jobs, etc.)         */
 /* ========================================= */
 .listing-page-body { background-color: #0d1117; }
 .listing-page-main-header { background-color: #1a2233; border-bottom: 1px solid #2d3748; padding: 1rem 2rem; }
@@ -222,11 +216,11 @@ body {
 .filter-widget h3 { margin-top: 0; font-size: 1.5rem; border-bottom: 1px solid #2d3748; padding-bottom: 1rem; margin-bottom: 1.5rem; }
 .listings-content { flex: 1; }
 .listing-title { font-size: 2rem; font-weight: 700; margin-top: 0; margin-bottom: 1.5rem; }
-.listing-card { background-color: #1a2233; border: 1px solid #2d3748; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; transition: border-color 0.2s ease; }
-.listing-card:hover { border-color: #22d3ee; }
+.job-card { background-color: #1a2233; border: 1px solid #2d3748; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; transition: border-color 0.2s ease; }
+.job-card:hover { border-color: #22d3ee; }
 
 /* ========================================= */
-/* Form Pages (Login/Signup)                 */
+/* Form Styles (Login/Signup)                */
 /* ========================================= */
 .form-page-body {
     display: flex;
@@ -244,7 +238,7 @@ body {
 .form-link a:hover { text-decoration: underline; }
 
 /* ========================================= */
-/* Dashboard Page                            */
+/* Dashboard Styles                          */
 /* ========================================= */
 .dashboard-body { background-color: #0d1117; }
 .dashboard-main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
@@ -267,4 +261,81 @@ body {
 .widget-list li:last-child { border-bottom: none; }
 .widget.featured-widget { border-color: #facc15; }
 .widget.featured-widget .widget-header h3 { color: #facc15; }
+
+/* ========================================= */
+/* Mobile Navigation Styles (Naya Code)      */
+/* ========================================= */
+.mobile-menu-button {
+    display: none; /* Desktop par chhupa hua hoga */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 24, 39, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%); /* Shuru mein screen se bahar hoga */
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.is-open {
+    transform: translateX(0); /* Jab open hoga to screen par aa jayega */
+}
+
+.mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.mobile-menu nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+.mobile-menu nav hr {
+    border: none;
+    border-top: 1px solid #2d3748;
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.close-menu-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Media Query: Yeh code sirf 900px se choti screens par chalega */
+@media (max-width: 900px) {
+    .desktop-nav {
+        display: none; /* Desktop menu ko mobile par chhupa dein */
+    }
+    .mobile-menu-button {
+        display: block; /* Mobile menu button ko dikhayein */
+    }
+}
 
