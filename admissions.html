@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<!-- AHEM: Hum ne is page ko ek makhsoos ID di hai taake JavaScript isay pehchan sake -->
+<body id="admissions-page">
     <header class="listing-page-main-header">
         <div class="header-content" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
             <a href="index.html" class="logo-text">mustaqbil.pk</a>
@@ -24,7 +25,8 @@
         <aside class="filters-sidebar">
             <div class="filter-widget">
                 <h3>Filters</h3>
-                <div class="form-group">
+                <!-- Filter options yahan aayenge -->
+                 <div class="form-group">
                     <label for="university" class="form-label">University</label>
                     <input type="text" id="university" class="form-input" placeholder="e.g., NUST">
                 </div>
@@ -32,16 +34,6 @@
                     <label for="city" class="form-label">Shehar</label>
                     <input type="text" id="city" class="form-input" placeholder="e.g., Islamabad">
                 </div>
-                <div class="form-group">
-                    <label for="field" class="form-label">Field of Study</label>
-                    <select id="field" class="form-input">
-                        <option>Tamam Fields</option>
-                        <option>Engineering</option>
-                        <option>Medical</option>
-                        <option>Business</option>
-                    </select>
-                </div>
-                <button class="btn btn-primary" style="width: 100%;">Apply Filters</button>
             </div>
         </aside>
         <section class="listings-content">
