@@ -31,10 +31,21 @@ async function fetchAdmissions() {
     data.forEach(item => {
         const card = document.createElement('div');
         card.classList.add('job-card'); // Hum wahi purana style istemal kar rahe hain
+        
+        // Deadline ko ahtiyat se format karein
+        let deadlineText = 'N/A';
+        if (item.deadline) {
+            try {
+                deadlineText = new Date(item.deadline).toLocaleDateString('en-GB'); // Use a specific format
+            } catch (e) {
+                console.warn('Invalid date format for deadline:', item.deadline);
+            }
+        }
+
         card.innerHTML = `
             <div class="job-card-header">
                 <h4>${item.program_name}</h4>
-                <span class="deadline">${item.deadline ? new Date(item.deadline).toLocaleDateString() : 'N/A'}</span>
+                <span class="deadline">${deadlineText}</span>
             </div>
             <p class="company-name">${item.university_name}</p>
             <p class="location">${item.city || 'N/A'}</p>
